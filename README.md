@@ -2,7 +2,7 @@
 
 MSc Data Science dissertation (University of Nottingham) developing a C++ framework that algorithmically verifies whether an integer sequence represents a valid "flip" — a structure from birational algebraic geometry's Minimal Model Program — by translating abstract algebraic conditions into concrete, efficient number-theoretic checks.
 
-**Author:** Ayush Saxena · [reignofayush@gmail.com](mailto:reignofayush@gmail.com) <br/>
+**Author:** Ayush Saxena **·** [reignofayush@gmail.com](mailto:reignofayush@gmail.com) <br/>
 **Supervisor:** Prof. Hamid Abban, School of Mathematical Science, University of Nottingham <br/>
 **Submitted:** September 2025, in partial fulfillment of the MSc Data Science degree
 
