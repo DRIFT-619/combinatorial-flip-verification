@@ -2,8 +2,7 @@
 
 MSc Data Science dissertation (University of Nottingham) developing a C++ framework that algorithmically verifies whether an integer sequence represents a valid "flip" — a structure from birational algebraic geometry's Minimal Model Program — by translating abstract algebraic conditions into concrete, efficient number-theoretic checks.
 
-**Author:** Ayush Saxena <br/>
-[reignofayush@gmail.com](mailto:reignofayush@gmail.com) <br/>
+**Author:** Ayush Saxena · [reignofayush@gmail.com](mailto:reignofayush@gmail.com) <br/>
 **Supervisor:** Prof. Hamid Abban, School of Mathematical Science, University of Nottingham <br/>
 **Submitted:** September 2025, in partial fulfillment of the MSc Data Science degree
 
@@ -14,6 +13,12 @@ MSc Data Science dissertation (University of Nottingham) developing a C++ framew
 Flips are a foundational construction in the Minimal Model Program (MMP) — the framework, shaped by Mori and others, for classifying algebraic varieties up to birational equivalence. Verifying whether a given configuration constitutes a valid flip is traditionally handled through abstract algebraic tools: graded rings, ideals, and quotient constructions. This dissertation asks a more concrete question: **can flip validity be checked computationally, directly on an integer sequence, without invoking the full machinery of symbolic algebra?**
 
 The answer developed here is yes. The dissertation formalises three necessary conditions on an integer vector $a = (a_1, \dots, a_n)$ that together determine flip validity, then implements them as an efficient C++ program.
+
+## What This Project Achieves
+
+To the best of my research, there was no existing online tool, calculator, or open codebase that could take an arbitrary integer sequence and determine whether it represents a valid combinatorial flip — verification of flips has historically stayed within symbolic/abstract algebra (graded rings, ideals, Gröbner bases), not something you could just run a program against.
+
+This project closes that gap: given any integer sequence of length $n > 3$, the program tells you definitively whether it's a valid flip, and if not, *exactly* which of the three necessary conditions fail and why — something the purely symbolic approach doesn't give you for free. It's a small, single-file, dependency-free tool, so it's also trivially reproducible and easy to build on. The scalability limitation discussed below (driven by the exponential cost of Condition 1's subset generation, and Condition 3's dependence on coordinate magnitude) is real, but it doesn't take away from the fact that, within its practical range, this is — as far as I could establish — the first concrete, runnable tool for numerically verifying flips.
 
 ## The Three Conditions
 
