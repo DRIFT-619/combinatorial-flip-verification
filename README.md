@@ -50,17 +50,17 @@ The three conditions are backed by a small set of general-purpose utility functi
 
 Nine test cases were run to validate the implementation, chosen to isolate every combination of pass/fail across the three conditions:
 
-| # | Sequence | Valid Input? | C1 | C2 | C3 | Flip? |
-|---|---|---|---|---|---|---|
-| 1 | (2, 1, −1, −1) | Yes | ✅ | ✅ | ✅ | **Yes** |
-| 2 | (2, 4, 6, −8, −10, −12, −14) | Yes | ❌ | ❌ | ❌ | No |
-| 3 | (1, 4, −2, −2) | Yes | ❌ | ✅ | ✅ | No |
-| 4 | (1, 3, 7, 9, −11, −13, −5, −17) | Yes | ✅ | ❌ | ✅ | No |
-| 5 | (10, 3, 1, −2, −4) | Yes | ✅ | ✅ | ❌ | No |
-| 6 | (1, 2, −2, −2) | Yes | ❌ | ❌ | ✅ | No |
-| 7 | (3, 4, −2, −2) | Yes | ❌ | ✅ | ❌ | No |
-| 8 | (2, 1, 3, −2, −4) | Yes | ✅ | ❌ | ❌ | No |
-| 9 | (10, 1, 3, 11, 7, −15) | **No** (only 1 negative coordinate) | N/A | N/A | N/A | No |
+| # | Sequence | Valid? | C1 | C2 | C3 | Flip? |
+|---|---|---|:---:|:---:|:---:|:---:|
+| 1 | (2, 1, -1, -1) | Yes | ✓ | ✓ | ✓ | **Yes** |
+| 2 | (2, 4, 6, -8, -10, -12, -14) | Yes | ✗ | ✗ | ✗ | No |
+| 3 | (1, 4, -2, -2) | Yes | ✗ | ✓ | ✓ | No |
+| 4 | (1, 3, 7, 9, -11, -13, -5, -17) | Yes | ✓ | ✗ | ✓ | No |
+| 5 | (10, 3, 1, -2, -4) | Yes | ✓ | ✓ | ✗ | No |
+| 6 | (1, 2, -2, -2) | Yes | ✗ | ✗ | ✓ | No |
+| 7 | (3, 4, -2, -2) | Yes | ✗ | ✓ | ✗ | No |
+| 8 | (2, 1, 3, -2, -4) | Yes | ✓ | ✗ | ✗ | No |
+| 9 | (10, 1, 3, 11, 7, -15) | **No** (only 1 negative coordinate) | — | — | — | No |
 
 Only Case 1 satisfies all three conditions and is correctly classified as a flip. Case 9 demonstrates the program's input validation: a flip requires at least two negative coordinates (so that the positive and negative "sides" can form dimensionally compatible geometric objects) — the program correctly aborts evaluation rather than running the conditions on structurally invalid input.
 
